@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-from gi.repository import gtk
+import gtk
 
 
 window = gtk.get_default_root_window()

@@ -3,6 +3,7 @@
 import time
 import msvcrt
 import os
+from castro import Castro
 from PIL import Image
 from PIL import ImageGrab
 
@@ -27,7 +28,15 @@ def screenshot():
 	#	print "Bye Bye!"
 	return
 	
+def record():
+	os.chdir('C:\\bmt')
+	c = Castro()
+	c.start()
+	if msvcrt.kbhit():
+		c.stop()	
+	return
 	
-	
-ensure_dir(bmt_path)
-screenshot()
+if __name__ == "__main__":
+	ensure_dir(bmt_path)
+	#screenshot()
+	record()

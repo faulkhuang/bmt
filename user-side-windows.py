@@ -32,8 +32,8 @@ def record():
 	os.chdir('C:\\bmt')
 	c = Castro()
 	c.start()
-	if msvcrt.kbhit():
-		c.stop()	
+	print "Start recording!"
+	c.stop()	
 	return
 	
 if __name__ == "__main__":

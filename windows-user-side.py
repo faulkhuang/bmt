@@ -3,16 +3,14 @@
 import time
 import msvcrt
 import os
-from castro import Castro
+#from castro import Castro
 from PIL import Image
 from PIL import ImageGrab
-
-bmt_path = 'D:\\30_Python\\bmt_temp'
-record_time = 60
 
 def ensure_dir(path):
 	if not os.path.exists(path):
 		os.makedirs(path)
+		print path + "  Create successfully."
 
 def screenshot(path):
 	#print "Input any key to leave program."
@@ -28,18 +26,21 @@ def screenshot(path):
 	#	print "Bye Bye!"
 	
 def record(path,rtime):
-	os.chdir(path)
+	#os.chdir(path)
 	t = time.strftime("%Y_%m_%d") + time.strftime("_%H_%M_%S")
 	c = Castro(filename = t + ".swf")
 	c.start()
 	time.sleep(rtime)
 	c.stop()
 
-def ensure_castro_path():
-	os.environ["CASTRO_DATA_DIR"] = "D:\\30_Python\\bmt_temp"
+def ensure_castro_path(path):
+	os.environ['CASTRO_DATA_DIR'] = path
+	print os.environ['CASTRO_DATA_DIR']
 	
 if __name__ == "__main__":
-	#ensure_castro_path()
-	ensure_dir(bmt_path)
-	screenshot(bmt_path)
-	record(bmt_path, record_time)
+	bmt_path = 'D:\\bmt_temp'
+	record_time = 60
+	ensure_castro_path(bmt_path)
+	#ensure_dir(bmt_path)
+	#screenshot(bmt_path)
+	#record(bmt_path, record_time)

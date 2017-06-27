@@ -8,7 +8,7 @@ from PIL import Image
 from PIL import ImageGrab
 #import Image
 
-bmt_path = 'D:\\bmt_temp'
+bmt_path = 'C:\\bmt_temp'
 record_time = 60
 	
 def ensure_dir(path):

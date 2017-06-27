@@ -3,7 +3,10 @@
 
 
 from distutils.core import setup
+from PIL import Image
+from PIL import ImageGrab
 import numpy
 import py2exe
 
-setup(console=['windows-user-side.py'])
+setup(option = {"py2exe":{"packages":["PIL"], "includes":["PIL.Image", "PIL.PngImagePlugin"]}},
+      console=['windows-user-side.py'])

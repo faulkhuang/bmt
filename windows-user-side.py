@@ -6,6 +6,7 @@ import os
 from castro import Castro
 from PIL import Image
 from PIL import ImageGrab
+#import Image
 
 bmt_path = 'D:\\bmt_temp'
 record_time = 60
@@ -22,10 +23,10 @@ def screenshot(path):
 	#	time.sleep(1.0)
 	os.chdir(path)
 	t = time.strftime("%Y_%m_%d") + time.strftime("_%H_%M_%S")
-	Image._initialized = 1
+	#Image._initialized = 1
 	img = ImageGrab.grab()
 	img = img.resize((1920,1080))
-	img.save(t+".jpg","JPEG")
+	img.save(t+".jpg", "JPEG")
 	print "Screenshot !"
 	#if msvcrt.kbhit():
 	#	break    

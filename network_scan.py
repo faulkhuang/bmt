@@ -72,4 +72,4 @@ if __name__ == "__main__":
             continue
 
         if net:
-scan_and_print_neighbors(net, interface)
+			scan_and_print_neighbors(net, interface)

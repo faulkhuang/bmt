@@ -72,4 +72,8 @@ if __name__ == "__main__":
             continue
 
         if net:
+<<<<<<< HEAD:network_scan.py
 			scan_and_print_neighbors(net, interface)
+=======
+            scan_and_print_neighbors(net, interface)
+>>>>>>> 58c9f9705c761962edb781e1db4c191add9b0c49:neighbourhood.py

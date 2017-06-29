@@ -1,5 +1,6 @@
 # Usage: python setup.py py2exe
 # exe will place at .\dist
+# encoding: utf-8
 
 
 from distutils.core import setup
